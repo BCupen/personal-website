@@ -10,6 +10,7 @@ export function AboutSection() {
             as="h2"
             variant="heading"
             size="2xl"
+            color="primary"
             className="text-left text-wrap max-w-sm"
           >
             Bringing Caribbean Skill and Talent to the Global Stage
