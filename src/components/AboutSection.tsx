@@ -3,7 +3,7 @@ import { Text } from "./Text";
 
 export function AboutSection() {
   return (
-    <AnimatedContainer bgColor="transparent">
+    <AnimatedContainer bgColor="transparent" className="p-10">
       <div className="flex items-center justify-between">
         <div className="space-y-4 w-1/2">
           <Text

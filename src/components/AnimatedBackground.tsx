@@ -32,12 +32,15 @@ export function AnimatedBackground() {
     <motion.div className="absolute inset-0 z-[-1]">
       <svg
         className="w-full h-[90%]"
-        viewBox="0 0 890 550"
+        viewBox="0 0 890 570"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="xMidYMid meet"
       >
         <motion.g
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
           className="text-primary/40 blur-[8px] drop-shadow-[0_0_10px_rgba(50,224,196,0.5)]"
           stroke="currentColor"
           strokeWidth={8}
@@ -59,11 +62,28 @@ export function AnimatedBackground() {
           className="text-foreground/60 blur-[3px] drop-shadow-[0_0_8px_rgba(56,189,248,0.8)]"
           strokeWidth="5"
           strokeLinecap="round"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: 1 }}
+          initial={{ pathLength: 0, pathOffset: 0, opacity: 0 }}
+          animate={{
+            // Array index represents steps in the sequence
+            // Step:       1  2  3  4  5  6  7
+            pathLength: [0, 1, 1, 1, 1, 1, 0],
+            pathOffset: [0, 0, 0, 0, 0, 0, 1],
+            opacity: [0, 1, 0.5, 1, 0.5, 1, 1],
+          }}
           transition={{
-            pathLength: { duration: 4, ease: "easeInOut", delay: 0.2 },
-            opacity: { duration: 0.5 },
+            duration: 8.5, // Total loop time is 8.5 seconds
+            repeat: Infinity, // Loop forever
+            ease: "easeInOut",
+            // 'times' dictates at what percentage of the total duration each array step occurs
+            times: [
+              0, // Step 1 (0s): Start invisible
+              0.35, // Step 2 (3s): Finished drawing in
+              0.45, // Step 3 (3.8s): Pulse 1 dims
+              0.55, // Step 4 (4.6s): Pulse 1 brightens
+              0.65, // Step 5 (5.5s): Pulse 2 dims
+              0.75, // Step 6 (6.3s): Pulse 2 brightens, ready to undraw
+              1, // Step 7 (8.5s): Finished undrawing from the start
+            ],
           }}
         />
       </svg>
