@@ -1,0 +1,35 @@
+[
+  {
+    "period": "2023 - Present",
+    "jobTitle": "Full Stack Developer",
+    "company": "CIBC Caribbean Ltd.",
+    "description": [
+      "Developed, maintained and supported several client facing applications",
+      "Platform developer responsible for providing support to wider client application teams",
+      "Including development, maintenance and review of a digital component library used on application interfaces",
+      "Additionally designing, implementing and documenting web micro services that are integrated within all applications internal and external"
+    ],
+    "tags": ["React", "TypeScript", "Java 17", "MySQL", "puTTy", "Spring Boot"]
+  },
+  {
+    "period": "2022 - 2023",
+    "jobTitle": "TIIP Intern",
+    "company": "CIBC Caribbean Ltd.",
+    "description": [
+      "Conducted manual and automated quality assurance for sever client applications",
+      "Designing and implementing user interface prototypes that would later become full projects"
+    ],
+    "tags": ["React", "TypeScript", "Cypress", "Postman"]
+  },
+  {
+    "period": "2021",
+    "jobTitle": "Software Engineering Intern",
+    "company": "Virtana",
+    "description": [
+      "Implement CI/CD pipelines for in development application within AWS",
+      "Implement cypress UI testing for the application",
+      "Automated several repetitive testing and development tasks using cypress"
+    ],
+    "tags": ["JavaScript", "Cypress", "AWS"]
+  }
+]

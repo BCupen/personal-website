@@ -1,5 +1,6 @@
 import { AnimatedContainer, Navbar, Text } from "@/components";
 import { AboutSection } from "@/components/AboutSection";
+import { ExperienceSection } from "@/components/ExperienceSection";
 import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/HeroSection";
 import { ProjectSection } from "@/components/ProjectSection";
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroSection />
 
       <AboutSection />
+      <ExperienceSection />
 
       <ProjectSection />
 
